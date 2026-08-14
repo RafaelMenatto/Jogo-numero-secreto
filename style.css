@@ -1,140 +1,162 @@
+/* Seleciona TODOS os elementos da página e aplica estas regras */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: white;
+    box-sizing: border-box; /* Faz o tamanho dos elementos incluir bordas e preenchimentos */
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    color: white; /* Define a cor do texto padrão como branco */
 }
 
+/* Estilos do corpo da página (body) */
 body {
-    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%); /* Cria um fundo com degradê (gradiente) de azul para azul escuro */
+    height: 100vh; /* Define a altura da página como 100% da altura da tela */
+    display: flex; /* Ativa o modo flexbox para organizar os itens */
+    align-items: center; /* Centraliza os itens na vertical */
+    justify-content: center; /* Centraliza os itens na horizontal */
 }
 
 
+/* Cria um elemento decorativo na frente do body (pseudo-elemento) */
 body::before {
-    background-image: url("img/code.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
+    background-image: url("img/code.png"); /* Usa a imagem code.png como fundo do elemento decorativo */
+    background-repeat: no-repeat; /* Impede que a imagem se repita na tela */
+    background-position: right; /* Posiciona a imagem de fundo à direita */
+    content: ""; /* Define um conteúdo vazio para o elemento existir */
+    display: block; /* Torna o elemento um bloco (ocupando o espaço todo) */
+    position: absolute; /* Posiciona o elemento de forma absoluta em relação ao body */
+    width: 100%; /* Largura total do elemento */
+    height: 100%; /* Altura total do elemento */
+    opacity: 0.4; /* Deixa a imagem semi-transparente (40% visível) */
 }
 
+/* Caixa principal do jogo */
 .container {
-    width: 80%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 24px;
-    border: 1px solid #1875E8;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-    background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
-    position: relative;
+    width: 80%; /* Ocupa 80% da largura da tela */
+    height: 80%; /* Ocupa 80% da altura da tela */
+    display: flex; /* Ativa o flexbox */
+    align-items: center; /* Centraliza os itens na vertical */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    border-radius: 24px; /* Arredonda os cantos da caixa */
+    border: 1px solid #1875E8; /* Adiciona uma borda azul ao redor */
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15); /* Adiciona uma sombra suave ao redor da caixa */
+    background-image: url("img/Ruido.png"); /* Usa a imagem Ruido.png como fundo */
+    background-size: 100% 100%; /* Estica o fundo para preencher toda a caixa */
+    position: relative; /* Posiciona a caixa de forma relativa (para filhos absolutos) */
 }
 
 
+/* Divisão interna que segura o conteúdo e a imagem */
 .container__conteudo {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
+    display: flex; /* Ativa o flexbox */
+    align-items: center; /* Alinha os itens no centro vertical */
+    position: absolute; /* Posiciona o conteúdo de forma absoluta */
+    bottom: 0; /* Cola o conteúdo na parte de baixo da caixa */
 }
 
+/* Bloco das informações do jogo */
 .container__informacoes {
-    flex: 1;
-    padding: 3rem;
+    flex: 1; /* Permite que o bloco cresça para ocupar o espaço livre */
+    padding: 3rem; /* Adiciona espaçamento interno de 3rem em volta */
 }
 
+/* Estilos dos botões */
 .container__botao {
-    border-radius: 16px;
-    background: #1875E8;
-    padding: 16px 24px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: 700;
-    border: none;
-    margin-top: 2rem;
+    border-radius: 16px; /* Arredonda os cantos do botão */
+    background: #1875E8; /* Cor de fundo azul do botão */
+    padding: 16px 24px; /* Espaçamento interno (16px vertical, 24px horizontal) */
+    width: 100%; /* Largura total do botão */
+    font-size: 24px; /* Tamanho do texto do botão */
+    font-weight: 700; /* Espessura (peso) da fonte em negrito */
+    border: none; /* Remove a borda padrão do botão */
+    margin-top: 2rem; /* Adiciona margem acima do botão */
 }
 
+/* Área onde ficam os textos */
 .container__texto {
-    margin: 16px 0 16px 0;
+    margin: 16px 0 16px 0; /* Margem de 16px acima e abaixo */
 }
 
+/* Texto com cor azul (não usado atualmente) */
 .container__texto-azul {
-    color: #1875E8;
+    color: #1875E8; /* Cor azul do texto */
 }
 
+/* Campo de input (onde o jogador digita o número) */
 .container__input {
-    width: 100%;
-    height: 72px;
-    border-radius: 16px;
-    background-color: #FFF;
-    border: none;
-    color: #1875E8;
-    padding: 2rem;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
+    width: 100%; /* Largura total do campo */
+    height: 72px; /* Altura fixa do campo */
+    border-radius: 16px; /* Arredonda os cantos */
+    background-color: #FFF; /* Fundo branco do campo */
+    border: none; /* Remove a borda padrão */
+    color: #1875E8; /* Cor do texto digitado (azul) */
+    padding: 2rem; /* Espaçamento interno de 2rem */
+    font-size: 24px; /* Tamanho do texto digitado */
+    font-weight: 700; /* Texto em negrito */
+    font-family: 'Inter', sans-serif; /* Família da fonte do texto */
 }
 
+/* Área que segura os botões lado a lado */
 .container__botoes {
-    display: flex;
-    gap: 2em;
+    display: flex; /* Ativa o flexbox */
+    gap: 2em; /* Espaço de 2em entre os botões */
 }
 
+/* Estilos do título (h1) */
 h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
-    padding-bottom: 3rem;
+    font-family: 'Chakra Petch', sans-serif; /* Família da fonte do título */
+    font-size: 72px; /* Tamanho grande do título */
+    padding-bottom: 3rem; /* Espaço abaixo do título */
 }
 
+/* Estilos de parágrafos e botões juntos */
 p,
 button {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; /* Família da fonte usada */
 }
 
+/* Parágrafo de instruções */
 .texto__paragrafo {
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 32px; /* Tamanho do texto */
+    font-weight: 400; /* Peso normal da fonte */
 }
 
+/* Estilo dos botões desabilitados (disabled) */
 button:disabled {
-    background-color: gray;
+    background-color: gray; /* Cor de fundo cinza quando desabilitado */
 }
 
+/* Regras responsivas: aplicadas quando a tela tem até 1250px de largura */
 @media screen and (max-width: 1250px) {
 
+    /* Reduz o tamanho do título em telas menores */
     h1 {
-        font-size: 50px;
+        font-size: 50px; /* Tamanho menor do título */
     }
 
+    /* Reduz o tamanho do texto dos botões */
     .container__botao {
-        font-size: 16px;
+        font-size: 16px; /* Tamanho menor do texto do botão */
     }
 
 
+    /* Reduz o tamanho do parágrafo */
     .texto__paragrafo {
-        font-size: 24px;
+        font-size: 24px; /* Tamanho menor do parágrafo */
     }
 
+    /* Esconde a imagem da pessoa em telas pequenas */
     .container__imagem-pessoa {
-        display: none;
+        display: none; /* Oculta a imagem */
     }
 
+    /* Empilha o conteúdo (imagem abaixo do texto) */
     .container__conteudo {
-        display: block;
-        position: inherit;
+        display: block; /* Empilha os itens verticalmente */
+        position: inherit; /* Volta a posição para o fluxo normal */
     }
 
+    /* Reduz o espaçamento interno das informações */
     .container__informacoes {
-        padding: 1rem
+        padding: 1rem /* Espaçamento interno reduzido */
     }
 }

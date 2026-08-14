@@ -2,39 +2,39 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres da página (acentos, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para se adaptar ao tamanho da tela (responsividade) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Acelera a conexão com o servidor de fontes do Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Acelera a conexão com o servidor que entrega as fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>JS Game</title>
+        rel="stylesheet"> <!-- Importa as fontes Chakra Petch (título) e Inter (texto) do Google Fonts -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo de estilos (CSS) à página -->
+    <title>JS Game</title> <!-- Título da aba do navegador -->
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="container__conteudo">
-            <div class="container__informacoes">
-                <div class="container__texto">
-                    <h1></h1>
-                    <p class="texto__paragrafo"></p>
+    <div class="container"> <!-- Caixa principal que centraliza o conteúdo do jogo -->
+        <div class="container__conteudo"> <!-- Divisão interna que organiza o conteúdo -->
+            <div class="container__informacoes"> <!-- Bloco com as informações do jogo -->
+                <div class="container__texto"> <!-- Área onde ficam os textos (título e parágrafo) -->
+                    <h1></h1> <!-- Título do jogo, preenchido via JavaScript -->
+                    <p class="texto__paragrafo"></p> <!-- Parágrafo com as instruções, preenchido via JavaScript -->
                 </div>
-                <input type="number" min="1" max="10" class="container__input">
-                <div class="chute container__botoes">
-                    <button onclick="verificarChute()" class="container__botao">Chutar</button>
-                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
+                <input type="number" min="1" max="10" class="container__input"> <!-- Campo onde o jogador digita o número (entre 1 e 10) -->
+                <div class="chute container__botoes"> <!-- Área dos botões -->
+                    <button onclick="verificarChute()" class="container__botao">Chutar</button> <!-- Botão "Chutar": chama a função verificarChute() ao ser clicado -->
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button> <!-- Botão "Novo jogo": chama reiniciarJogo(), começa desabilitado (disabled) -->
                 </div>
             </div>
-            <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
+            <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" /> <!-- Imagem decorativa da pessoa na tela -->
         </div>
     </div>
 
 
 
 
-    <script src="app.js" defer></script>
+    <script src="app.js" defer></script> <!-- Carrega o arquivo de lógica do jogo; "defer" faz ele rodar depois que o HTML é carregado -->
 </body>
 
 </html>
