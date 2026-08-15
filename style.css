@@ -125,6 +125,22 @@ button:disabled {
     background-color: gray; /* Cor de fundo cinza quando desabilitado */
 }
 
+/* Ícone do GitHub no canto superior direito */
+.github-link {
+    position: fixed; /* Fixa o ícone na tela, ele não se move ao rolar a página */
+    top: 20px; /* Distância do ícone em relação ao topo da tela */
+    right: 20px; /* Distância do ícone em relação à lateral direita da tela */
+    color: white; /* Define a cor do ícone como branca */
+    opacity: 0.8; /* Deixa o ícone levemente transparente (80% visível) */
+    transition: opacity 0.2s ease, transform 0.2s ease; /* Aplica uma transição suave de 0.2s na transparência e no tamanho */
+    z-index: 10; /* Garante que o ícone fique acima de outros elementos da página */
+}
+
+.github-link:hover {
+    opacity: 1; /* Deixa o ícone totalmente visível quando o mouse passa por cima */
+    transform: scale(1.1); /* Aumenta o ícone em 10% quando o mouse passa por cima */
+}
+
 /* Regras responsivas: aplicadas quando a tela tem até 1250px de largura */
 @media screen and (max-width: 1250px) {
 
